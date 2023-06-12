@@ -1,15 +1,15 @@
 import React from 'react'
 import cssModlue from './ContactList.module.css'
 import { useSelector } from 'react-redux';
-import { getContacts, getFilter } from 'redux/selectors';
+import { getContacts, /* getFilter */ } from 'redux/selectors';
 import ContactItem from 'components/ContactItem/ContactItem';
 
 export default function ContactList() {
 
-	const defaultText = 'Not have a contacts'
+	// const defaultText = 'Not have a contacts'
 
 	const contacts = useSelector(getContacts);
-	const filter = useSelector(getFilter);
+	// const filter = useSelector(getFilter);
 
 	// /////////////////////
 
@@ -17,9 +17,11 @@ export default function ContactList() {
 	// 	return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
 	// })
 
-	return contacts ? <ul className={cssModlue.list}>
-		{contacts.map((item) => {
-			return <ContactItem contact={item} />
-		})}
-	</ul> : defaultText
+	return <ul className={cssModlue.list}>
+		{
+			contacts.map((item) => {
+				return <ContactItem key={item.id} contact={item} />
+			})
+		}
+	</ul>
 }

@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-import { nanoid } from 'nanoid';
 import Button from '@mui/material/Button';
 import cssModule from './ContactForm.module.css'
 import { useDispatch } from 'react-redux';

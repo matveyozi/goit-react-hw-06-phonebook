@@ -13,7 +13,7 @@ export default function ContactItem({ contact }) {
 	const deleteContacts = dispatch(deleteContact(contact.id))
 
   return (
-	  <li className={cssModlue.item} key={contact.id}>
+	  <li className={cssModlue.item}>
 
 		  <p className="name">
 			  {contact.name}
