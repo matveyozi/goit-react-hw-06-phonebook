@@ -16,7 +16,7 @@ export default function ContactList() {
 	// const filteredList = contacts.filter(item => {
 	// 	return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
 	// })
-
+console.log(contacts)
 	return <ul className={cssModlue.list}>
 		{
 			contacts.map((item) => {
