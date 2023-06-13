@@ -9,7 +9,6 @@ export default function ContactList() {
 	// const defaultText = 'Not have a contacts'
 
 	const contacts = useSelector(getContacts);
-	console.log(contacts)
 	// const filter = useSelector(getFilter);
 
 	// /////////////////////
