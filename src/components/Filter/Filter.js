@@ -3,22 +3,21 @@ import TextField from '@mui/material/TextField';
 import cssModule from './Filter.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterValue } from 'redux/filtersSlice';
-import {  getFilter } from 'redux/selectors';
+import { getFilter } from 'redux/selectors';
 const Filter = () => {
 	// const handleFilterContact = () => {
-		// 	return contacts.filter(item => {
-			// 	  return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
-			// 	})
-			//   }
-			
-			const dispatch = useDispatch();
-			const handleChange = e => {
-				dispatch(setFilterValue(e.target.value));
-				
-			};
-			
-			const filter = useSelector(getFilter);
-			console.log(filter)
+	// 	return contacts.filter(item => {
+	// 	  return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
+	// 	})
+	//   }
+
+	const dispatch = useDispatch();
+	const handleChange = e => {
+		dispatch(setFilterValue(e.target.value));
+
+	};
+
+	const filter = useSelector(getFilter);
 	return (
 		<div className={cssModule.filter}>
 			<h2>Find contacts by name</h2>
@@ -27,7 +26,7 @@ const Filter = () => {
 				value={filter}
 				id="standard-basic" label="Name?" variant="standard" />
 		</div>
-		
+
 	)
 }
 

@@ -30,7 +30,7 @@ import { addContact } from 'redux/contactsSlice';
 				name='name' id="filled-basic" label="Name" variant="filled" />
 			<TextField type='tel' 
 				
-					// inputMode: 'numeric',
+					
 					pattern=
 					  '+?d{1,4}?[-.s]?(?d{1,3}?)?[-.s]?d{1,4}[-.s]?d{1,4}[-.s]?d{1,9}'
 				  
