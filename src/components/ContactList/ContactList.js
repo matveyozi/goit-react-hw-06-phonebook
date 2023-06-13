@@ -6,21 +6,20 @@ import ContactItem from 'components/ContactItem/ContactItem';
 
 export default function ContactList() {
 
-	// const defaultText = 'Not have a contacts'
+	const defaultText = 'Not have a contacts'
 
 	const contacts = useSelector(getContacts);
 	const filter = useSelector(getFilter);
 
-	// /////////////////////
 
 	const filteredList = contacts.filter(item => {
 		return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
 	})
 	return <ul className={cssModlue.list}>
 		{
-			filteredList.map((item) => {
+			filteredList ? filteredList.map((item) => {
 				return <ContactItem key={item.id} contact={item} />
-			})
-		}
+			}) : defaultText
+		} 
 	</ul>
 }

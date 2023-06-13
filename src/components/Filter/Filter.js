@@ -5,12 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilterValue } from 'redux/filtersSlice';
 import { getFilter } from 'redux/selectors';
 const Filter = () => {
-	// const handleFilterContact = () => {
-	// 	return contacts.filter(item => {
-	// 	  return item.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim()) || item.number.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
-	// 	})
-	//   }
-
+	
 	const dispatch = useDispatch();
 	const handleChange = e => {
 		dispatch(setFilterValue(e.target.value));
