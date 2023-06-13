@@ -10,7 +10,7 @@ export default function ContactItem({ contact }) {
 	const dispatch = useDispatch();
  
 
-	const deleteContacts = dispatch(deleteContact(contact.id))
+	const deleteContacts = () => dispatch(deleteContact(contact.id))
 	console.log(contact)
   return (
 	  <li className={cssModlue.item}>
